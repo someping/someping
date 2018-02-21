@@ -1,12 +1,12 @@
 {
-  "name": "electron-quick-start",
+  "name": "@someping/someping",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "Chat client for the decentralized chat protocol Someping",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/someping/someping",
   "keywords": [
     "Electron",
     "quick",
