@@ -3,8 +3,8 @@ const url = require('url')
 
 const electron = require('electron')
 const app = electron.app
+const menu = electron.Menu
 const BrowserWindow = electron.BrowserWindow
-
 // Somepingd
 const somepingd = require('@someping/somepingd');
 global.daemon = new somepingd.daemon();
@@ -14,9 +14,15 @@ daemon.start();
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
 
+
+const {ipcMain} = require('electron')
+ipcMain.on('sendmessage', (event, arg) => {
+
+})
+
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 800, height: 600})
+  mainWindow = new BrowserWindow({width: 400, height: 600})
 
   // and load the index.html of the app.
   mainWindow.loadURL(url.format({
@@ -26,7 +32,7 @@ function createWindow () {
   }))
 
   // Open the DevTools.
-  // mainWindow.webContents.openDevTools()
+  //mainWindow.webContents.openDevTools()
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {

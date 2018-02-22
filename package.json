@@ -2,26 +2,23 @@
   "name": "@someping/someping",
   "version": "1.0.0",
   "description": "Chat client for the decentralized chat protocol Someping",
-  "main": "main.js",
+  "main": "app/main.js",
   "scripts": {
     "start": "electron ."
   },
   "repository": "https://github.com/someping/someping",
-  "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
-  ],
-  "author": "GitHub",
+  "author": "kjellberg",
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "~1.8.2"
   },
   "dependencies": {
-    "@someping/somepingd": "file:../somepingd",
-    "express": "^4.15.2",
-    "socket.io": "^2.0.4"
+    "@someping/somepingd": "file:../somepingd"
+  },
+  "build": {
+    "appId": "io.someping.app",
+    "copyright": "Copyright © 2018 Young Media Group",
+    "asar": true,
+    "compression": "maximum"
   }
 }
